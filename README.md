@@ -70,6 +70,7 @@ The simulation runs in a window and displays vehicles moving through a four-way 
 ## Project Structure
 
 - **`generator.c`**: Program for generating traffic by choosing a random lane.
+- **`simulator.c`**: Program for generating traffic by choosing a random lane.
 - **`README.md`**: This file, providing an overview of the project.
 - **`Makefile`**: A Makefile to simplify the build process.
 
