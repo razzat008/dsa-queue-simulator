@@ -88,3 +88,40 @@ SDL_Renderer *CreateRenderer(SDL_Window *window) {
   }
   return renderer;
 }
+
+void drawVehicle(SDL_Renderer *renderer, Vehicle *vehicle) {
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+    printf("Drawing vehicle %d at (%d, %d) with size (%d, %d)\n", 
+           vehicle->vehicle_id, vehicle->rect.x, vehicle->rect.y, vehicle->rect.w, vehicle->rect.h);
+    SDL_RenderFillRect(renderer, &vehicle->rect);
+}
+
+void DrawDashedLine(SDL_Renderer *renderer, int x1, int y1, int x2, int y2, int dashLength) {
+    int dx = x2 - x1;
+    int dy = y2 - y1;
+    int steps = (abs(dx) > abs(dy)) ? abs(dx) : abs(dy);
+    
+    float xIncrement = (float)dx / steps;
+    float yIncrement = (float)dy / steps;
+
+    float x = x1;
+    float y = y1;
+
+    if (dashLength == 0) {
+        // If dashLength is 0, draw a continuous line
+        for (int i = 0; i <= steps; i++) {
+            SDL_RenderDrawPoint(renderer, (int)x, (int)y);
+            x += xIncrement;
+            y += yIncrement;
+        }
+    } else {
+        // Draw a dashed line
+        for (int i = 0; i <= steps; i++) {
+            if ((i / dashLength) % 2 < 1) {
+                SDL_RenderDrawPoint(renderer, (int)x, (int)y);
+            }
+            x += xIncrement;
+            y += yIncrement;
+        }
+    }
+}
