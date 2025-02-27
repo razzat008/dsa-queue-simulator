@@ -102,15 +102,7 @@ The simulation runs in a window and displays vehicles moving through a four-way 
 
 ---
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-
-- SDL2 for providing an excellent library for 2D rendering and window management.
-- The open-source community for inspiration and support.
-
----
+<video width="640" height="360" controls>
+  <source src="simulaton.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
