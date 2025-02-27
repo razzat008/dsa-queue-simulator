@@ -101,8 +101,5 @@ The simulation runs in a window and displays vehicles moving through a four-way 
 - **SDL2 GitHub Repository**: [https://github.com/libsdl-org/SDL](https://github.com/libsdl-org/SDL)
 
 ---
+![simulation ](simulation.gif)
 
-<video width="640" height="360" controls>
-  <source src="simulaton.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
