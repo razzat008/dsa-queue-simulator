@@ -154,6 +154,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 1. Collision detection
 2. Error handling
 3. Dynamic Vehicle properties
+4. Bug: Traffic state changes when the vehicle hasnot passed thoroughly
 
 ---
 
